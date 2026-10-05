@@ -73,7 +73,7 @@ Ashby. One response holds every listed posting:
 curl -s -A "ats-job-boards-skill" "https://api.ashbyhq.com/posting-api/job-board/{slug}"
 ```
 
-Errors: 404 means the slug is wrong or the company uses another ATS. Do not retry with variations beyond Step 1. A 429 or repeated 5xx means stop and tell the user. On Lever, a 404 or an empty array `[]` from the US host can mean the slug is wrong, the board is empty, or the company is hosted in the EU. Try the EU host once before concluding. The EU host was not reachable from the environment this skill was written in, so that path is untested [VERIFY].
+Errors: 404 means the slug is wrong or the company uses another ATS. Do not retry with variations beyond Step 1. A 429 or repeated 5xx means stop and tell the user. On Lever, a 404 or an empty array `[]` from the US host can mean the slug is wrong, the board is empty, or the company is hosted in the EU. Try the EU host once before concluding. The EU host is documented by Lever but this skill has not exercised it, so treat that path as best effort.
 
 ## Step 3: normalize
 
